@@ -116,7 +116,7 @@ You can also sign all current requests at once.
 
 We’ll use the --all option to sign the remaining certificate:
 ```
-sudo /opt/puppetlabs/bin/puppet cert sign --all
+sudo /opt/puppetlabs/bin/puppetserver ca sign --all 
 ```
 ## Step 5 — Verifying the Installation
 
