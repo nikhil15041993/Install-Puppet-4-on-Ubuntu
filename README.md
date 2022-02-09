@@ -68,14 +68,14 @@ sudo systemctl enable puppetserver
 Enable the official Puppet Labs repository
 First we’ll enable the official Puppet Labs collection repository with these commands:
 ```
-wget https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
-sudo dpkg -i puppetlabs-release-pc1-xenial.deb
+wget https://apt.puppetlabs.com/puppet6-release-focal.deb
+sudo dpkg -i puppet6-release-focal.deb
 sudo apt-get update
 ```
 Install the Puppet agent package
 Then, we’ll install the puppet-agent package:
 ```
-sudo apt-get install puppet-agent
+sudo apt-get install puppet-agent -y
 ```
 We’ll start the agent and enable it to start on boot:
 ```
