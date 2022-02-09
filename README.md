@@ -24,13 +24,13 @@ puppet_ip_address    puppet
 We’ll enable the official Puppet Labs collection repository with these commands:
 
 ```
-curl -O https://apt.puppetlabs.com/puppetlabs-release-pc1-xenial.deb
-sudo dpkg -i puppetlabs-release-pc1-xenial.deb
+wget https://apt.puppetlabs.com/puppet6-release-focal.deb
+sudo dpkg -i puppet6-release-focal.deb
 sudo apt-get update
 ```
 When apt-get update is complete, ensuring that we’ll be pulling from the Puppet Labs repository, we’ll install the puppetserver package:
 ```
-sudo apt-get install puppetserver
+sudo apt-get install puppetserver -y
 ```
 ## Configure memory allocation
 
