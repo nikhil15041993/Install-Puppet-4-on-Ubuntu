@@ -134,6 +134,30 @@ file {'/tmp/it_works.txt':                        # resource type file and filen
   mode    => '0644',                              # file permissions
   content => "It works on ${ipaddress_eth0}!\n",  # Print the eth0 IP fact
 }
+
+=========================================================================
+
+package {'openssl':
+         ensure => present,
+         before => File['/etc/ssh/sshd_config'],
+         }
+         
+==========================================================================
+
+file {'ssh-config':
+      ensure => file
+      path => '/etc/ssh/ssh_config',
+      mode => 600	,
+      source => <source file name location>
+      }
+      
+==========================================================================
+
+service {'sshd':
+        ensure => running,
+        enable => true,
+        subscribe => File['/etc/ssh/sshd_config']  # wheneven any changes in the main config file the service ssh restar
+        }
 ```
 By default Puppet Server runs the commands in its manifests by default every 30 minutes. 
 
