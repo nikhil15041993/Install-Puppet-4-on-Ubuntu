@@ -15,7 +15,7 @@ On each agent machine, edit the /etc/hosts file. At the end of the file, specify
 sudo nano /etc/hosts
 /etc/hosts
 ```
-puppet-master_ip_address    puppet puppet-master
+<puppet-master_ip_address>    puppet puppet-master
 ```
 
 ## Step 2 — Installing Puppet Server
